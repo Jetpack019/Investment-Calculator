@@ -1,5 +1,5 @@
 import React from 'react'
-import { calculateInvestmentResults, formatter } from '../util/investment'
+import { calculateInvestmentResults, formatter } from '../util/investment.js'
 
 function Results({input}) {
   const resultsData = calculateInvestmentResults(input);
@@ -26,7 +26,7 @@ function Results({input}) {
                         <td>{formatter.format(yearData.valueEndOfYear)}</td>
                         <td>{formatter.format(yearData.interest)}</td>
                         <td>{formatter.format(totalInterest)}</td>
-                        <td>{totalAmountInvested}</td>
+                        <td>{formatter.format(totalAmountInvested)}</td>
                     </tr>
                 )
             })}
